@@ -74,7 +74,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 },
   { 
     id: '2', 
-    content: `# Les enjeux dans la Finance\n\n<img src="/images/mindmap.png" width="100%"/>` },
+    content: `# Enjeux dans la Finance\n\n<a href="/images/mindmap.png"><img src="/images/mindmap.png" width="100%"/></a>` },
   { id: '3', content: 'Informations spécifiques à la page 3.' },
   { id: '4', content: 'Informations spécifiques à la page 4.' },
 ]

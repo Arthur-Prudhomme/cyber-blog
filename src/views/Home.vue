@@ -49,6 +49,7 @@ html, body, #app {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 2em 15em 0 15em;
   gap: 16px;
 }
 </style>
