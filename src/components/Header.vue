@@ -17,10 +17,10 @@ export default {
 
 <style>
 .header {
-  background-color: #333;
+  background-color: rgb(8, 8, 8);
   color: white;
   padding: 8px;
-  text-align: center;
+  text-align:initial;
   font-size: 24px;
 }
 </style>

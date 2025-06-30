@@ -1,9 +1,11 @@
 <template>
   <div class="detail">
-    <h2>{{ pageData?.title || 'Page introuvable' }}</h2>
-    <div v-if="pageData" class="text-box" v-html="pageData.content"></div>
-    <div v-else>
-      Aucune donnée pour cette page.
+    <div class="text-box" >
+        <h2>{{ pageData?.title || 'Page introuvable' }}</h2>
+        <div v-if="pageData" v-html="pageData.content"></div>
+        <div v-else>
+          Aucune donnée pour cette page.
+        </div>
     </div>
   </div>
 </template>
@@ -75,18 +77,22 @@ export default {
 </script>
 
 <style>
+
 .detail {
-  padding: 0 20em 0 20em;
-  text-align: center;
-  padding-bottom: 5em;
+    min-height:100vh;
 }
 
 .text-box {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   padding: 16px;
   margin-top: 16px;
   text-align: initial;
+
+  color: rgb(0, 0, 0);
+  margin: 2em 25em 0 25em;
+  padding-bottom: 10em;
+  text-align: center;
+  
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 </style>
