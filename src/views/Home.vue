@@ -21,9 +21,9 @@ export default {
   data() {
     return {
       cards: [
-        { id: 1, title: 'Page A', description: 'Description de la carte A' },
-        { id: 2, title: 'Page B', description: 'Description de la carte B' },
-        { id: 3, title: 'Page C', description: 'Description de la carte C' },
+        { id: 1, title: 'Article 1', description: 'Description de la carte 1' },
+        { id: 2, title: 'Article 2', description: 'Description de la carte 2' },
+        { id: 3, title: 'Article 3', description: 'Description de la carte 3' },
       ]
     }
   }

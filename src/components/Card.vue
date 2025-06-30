@@ -28,6 +28,6 @@ export default {
   transition: background-color 0.2s;
 }
 .card:hover {
-  background-color: #f9f9f9;
+  background-color: #375ae74c;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1 @click="goHome" style="cursor: pointer">Mon Application</h1>
+    <h1 @click="goHome" style="cursor: pointer">Cyber-Blog</h1>
   </header>
 </template>
 
