@@ -1,7 +1,6 @@
 <template>
   <div class="detail">
     <div class="text-box" >
-        <h2>{{ pageData?.title || 'Page introuvable' }}</h2>
         <div class="content" v-if="pageData" v-html="renderedHtml"></div>
         <div v-else>
           Aucune donnée pour cette page.
@@ -15,8 +14,7 @@ import { marked } from 'marked'
 
 const pages = [
   { 
-    id: '1', 
-    title: 'Saint-Nazaire', 
+    id: '1',
     content: 
     `
 
@@ -74,9 +72,11 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 - [Le Figaro – Article](https://www.lefigaro.fr/nantes/cyberattaque-a-saint-nazaire-un-an-apres-le-tiers-des-applications-toujours-hors-service-20250416)
 `
 },
-  { id: '2', title: 'Page 2', content: 'Texte propre à la page 2.' },
-  { id: '3', title: 'Page 3', content: 'Informations spécifiques à la page 3.' },
-  { id: '4', title: 'Page 4', content: 'Informations spécifiques à la page 4.' },
+  { 
+    id: '2', 
+    content: `# Les enjeux du secteur de la Finance\n\n<img src="/images/mindmap.png" width="100%"/>` },
+  { id: '3', content: 'Informations spécifiques à la page 3.' },
+  { id: '4', content: 'Informations spécifiques à la page 4.' },
 ]
 
 export default {
