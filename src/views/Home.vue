@@ -21,9 +21,10 @@ export default {
   data() {
     return {
       cards: [
-        { id: 1, title: 'Article 1', description: 'Description de la carte 1' },
+        { id: 1, title: 'Saint-Nazaire', description: 'Rechercher une actualité cyber' },
         { id: 2, title: 'Article 2', description: 'Description de la carte 2' },
         { id: 3, title: 'Article 3', description: 'Description de la carte 3' },
+        { id: 4, title: 'Article 4', description: 'Description de la carte 4' },
       ]
     }
   }

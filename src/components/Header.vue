@@ -19,7 +19,7 @@ export default {
 .header {
   background-color: #333;
   color: white;
-  padding: 16px;
+  padding: 8px;
   text-align: center;
   font-size: 24px;
 }
