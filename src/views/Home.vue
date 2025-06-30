@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       cards: [
-        { id: 1, title: 'Saint-Nazaire', description: 'Rechercher une actualité cyber',image: '/images/background.jpg' },
+        { id: 1, title: 'Saint-Nazaire', description: 'Rechercher une actualité cyber',image: '/images/saint-nazaire.jpg' },
         { id: 2, title: 'Article 2', description: 'Description de la carte 2',image: '/images/background.jpg' },
         { id: 3, title: 'Article 3', description: 'Description de la carte 3',image: '/images/background.jpg' },
         { id: 4, title: 'Article 4', description: 'Description de la carte 4',image: '/images/background.jpg' },

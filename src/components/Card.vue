@@ -19,8 +19,7 @@ export default {
 
 <style>
 .card {
-  background-color: rgb(30, 30, 30);
-  border: 2px solid #4e4e4e;
+  background-color: rgb(40, 40, 40);
   border-radius: 8px;
   padding: 12px;
   cursor: pointer;

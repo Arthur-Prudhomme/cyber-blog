@@ -58,6 +58,10 @@ const pages = [
         équipes à revenir au papier et au crayon.
         <br>
         Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de Paris.
+        <br><br><br>
+        https://www.saintnazaire.fr/actualite/cyberattaque-le-point-sur-la-situation/
+        <br>
+        https://www.lefigaro.fr/nantes/cyberattaque-a-saint-nazaire-un-an-apres-le-tiers-des-applications-toujours-hors-service-20250416
     `
 },
   { id: '2', title: 'Page 2', content: 'Texte propre à la page 2.' },
