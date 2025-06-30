@@ -19,8 +19,8 @@ export default {
 .header {
   background-color: rgb(8, 8, 8);
   color: white;
-  padding: 8px;
-  text-align:initial;
-  font-size: 24px;
+  padding: 4px;
+  text-align:center;
+  font-size: 16px;
 }
 </style>
