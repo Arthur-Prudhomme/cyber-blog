@@ -226,7 +226,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - En utilisant le débogueur on peut accéder au fichier js et donc récupérer la valeur, mais cette dernière
   est dans un format illisible
   <a href="/images/challenge-6/challenge-6-begin.jpg"><img src="/images/challenge-6/challenge-6-begin.jpg" width="100%"/></a>
-  - En utilisant la console pour réaliser la fonction unescape() 2 fois en éxécutant ensuite le résultat, 
+  - En utilisant la console pour réaliser la fonction unescape() 2 fois en exécutant ensuite le résultat, 
   on obtient le flag
   <a href="/images/challenge-6/challenge-6-complete.jpg"><img src="/images/challenge-6/challenge-6-complete.jpg" width="100%"/></a>
   
@@ -305,67 +305,82 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   # Root-me : Javascript - Obfuscation 3
   ### Infos
   - Difficulté : 3/5
-  - Url : [Javascript - Obfuscation 3]()
+  - Url : [Javascript - Obfuscation 3](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-3)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source et la console
 
   - Contexte technique
-    - 
+    - Un alert où il faut mettre un mot de passe que l'on ne possède pas
 
   ### Résolution
-  - 
+  - En utlisant le débogueur on obsèrve une fonction qui semble comparer le mot de passe attendu
+  <a href="/images/challenge-9/challenge-9-begin.jpg"><img src="/images/challenge-9/challenge-9-begin.jpg" width="100%"/></a>
+  - En vérité cette fonction est un piège et ne sert à rien, en prenant la chaine qui n'est jamais appelé et en 
+  réalisant, dans la console, la fonction unescape() puis String.fromCharCode(), comme dans la fonction, on trouve le
+  mot de passe
+  <a href="/images/challenge-9/challenge-9-solution.jpg"><img src="/images/challenge-9/challenge-9-solution.jpg" width="100%"/></a>
   
   ### Résultat
   - Flag : 786OsErtk12
 
   ### Prévention
-  - 
+  - Ne pas mettre dans le front des valeurs de sécurité
   ` },
   { id: '12', content: `
   # Root-me : XSS - Stockée 1
   ### Infos
   - Difficulté : 3/5
-  - Url : [XSS - Stockée 1]()
+  - Url : [XSS - Stockée 1](https://www.root-me.org/fr/Challenges/Web-Client/XSS-Stockee-1)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Volez le cookie de session de l’administrateur et utilisez le pour valider l’épreuve
 
   - Contexte technique
-    - 
+    - Un formulaire qui permet d'envoyer des messages à un admin
 
   ### Résolution
-  - 
+  - En se servant de la doc du défis on comprend que le XSS, comme l'injection sql, consiste à mettre un morceaux de code qui
+  sera exécuté, dans le cas du XSS un script
+  <a href="/images/challenge-10/challenge-10-begin.jpg"><img src="/images/challenge-10/challenge-10-begin.jpg" width="100%"/></a>
+  - On écrit donc un script en se servant de webhook qui permet d'avoir des logs sur tout les appels, et de cette manière
+  lorsque l'admin reçoit ce message, ce dernier récupère sa session avec le document.cookie
+  <a href="/images/challenge-10/challenge-10-solution.jpg"><img src="/images/challenge-10/challenge-10-solution.jpg" width="100%"/></a>
+  - Après quelque essais on peut récupérer le ADMIN_COOKIE
+  <a href="/images/challenge-10/challenge-10-webhook.jpg"><img src="/images/challenge-10/challenge-10-webhook.jpg" width="100%"/></a>
   
   ### Résultat
   - Flag : NkI9qe4cdLIO2P7MIsWS8ofD6
 
   ### Prévention
-  - 
+  - Ne pas laisser du code être validé dans un champ de texte, par exemple en interdisant les caractères spéciaux
   ` },
   { id: '13', content: `
   # Root-me : AST - Deobfuscation
   ### Infos
   - Difficulté : 3/5
-  - Url : [AST - Deobfuscation]()
+  - Url : [AST - Deobfuscation](https://www.root-me.org/fr/Challenges/Web-Client/AST-Deobfuscation)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Convertir l'AST en code pour retrouver le flag
 
   - Contexte technique
-    - 
+    - On possède un fichier AST
 
   ### Résolution
-  - 
+  - On converti le fichier AST et on récupère le code
+  <a href="/images/challenge-11/challenge-11-ast.jpg"><img src="/images/challenge-11/challenge-11-ast.jpg" width="100%"/></a>
+  - Une fois exécuté, le code nous donne le flag
+  <a href="/images/challenge-11/challenge-11-solution.jpg"><img src="/images/challenge-11/challenge-11-solution.jpg" width="100%"/></a>
   
   ### Résultat
   - Flag : g00d_j0b_easy_deobfuscation
 
   ### Prévention
-  - 
+  - Ne pas mettre une valeur secrète dans un AST car il est réversible
   ` }
 ]
 
