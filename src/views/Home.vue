@@ -24,8 +24,17 @@ export default {
       cards: [
         { id: 1, title: 'Saint-Nazaire', description: 'Rechercher une actualité cyber',image: '/images/saint-nazaire.jpg' },
         { id: 2, title: 'Enjeux dans la Finance', description: 'Rechercher des enjeux de cybersécurité dans un secteur',image: '/images/finance.jpg' },
-        { id: 3, title: 'Article 3', description: 'Description de la carte 3',image: '/images/background.jpg' },
-        { id: 4, title: 'Article 4', description: 'Description de la carte 4',image: '/images/background.jpg' },
+        { id: 3, title: 'Root-Me : HTML - boutons désactivés', description: 'Root-me challenge',image: '/images/challenge-1/challenge-1-begin.jpg' },
+        { id: 4, title: 'Root-Me : Javascript - Authentification', description: 'Root-me challenge',image: '/images/challenge-2/challenge-2-begin.jpg' },
+        { id: 5, title: 'Root-Me : Javascript - Source', description: 'Root-me challenge',image: '/images/challenge-3/challenge-3-begin.jpg' },
+        { id: 6, title: 'Root-Me : Javascript - Authentification 2', description: 'Root-me challenge',image: '/images/challenge-4/challenge-4-begin.jpg' },
+        { id: 7, title: 'Root-Me : Javascript - Obfuscation 1', description: 'Root-me challenge',image: '/images/challenge-5/challenge-5-begin.jpg' },
+        { id: 8, title: 'Root-Me : Javascript - Obfuscation 2', description: 'Root-me challenge',image: '/images/challenge-6/challenge-6-begin.jpg' },
+        { id: 9, title: 'Root-Me : Javascript - Native code', description: 'Root-me challenge',image: '/images/challenge-7/challenge-7-begin.jpg' },
+        { id: 10, title: 'Root-Me : Javascript - Webpack', description: 'Root-me challenge',image: '/images/challenge-8/challenge-8-begin.jpg' },
+        { id: 11, title: 'Root-Me : Javascript - Obfuscation 3', description: 'Root-me challenge',image: '/images/challenge-9/challenge-9-begin.jpg' },
+        { id: 12, title: 'Root-Me : XSS - Stockée 1', description: 'Root-me challenge',image: '/images/challenge-10/challenge-10-begin.jpg' },
+        { id: 13, title: 'Root-Me : AST - Deobfuscation', description: 'Root-me challenge',image: '/images/challenge-11/challenge-11-ast.jpg' },
       ]
     }
   }

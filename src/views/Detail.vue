@@ -16,9 +16,7 @@ const pages = [
   { 
     id: '1',
     content: 
-    `
-
-# Saint-Nazaire - Cyberattaque 2024
+    `# Saint-Nazaire - Cyberattaque 2024
 
 ## Cible
 
@@ -74,9 +72,257 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 },
   { 
     id: '2', 
-    content: `# Enjeux dans la Finance\n\n<a href="/images/mindmap.png"><img src="/images/mindmap.png" width="100%"/></a>` },
-  { id: '3', content: 'Informations spécifiques à la page 3.' },
-  { id: '4', content: 'Informations spécifiques à la page 4.' },
+    content: 
+  `# Enjeux dans la Finance
+
+  <a href="/images/mindmap.png"><img src="/images/mindmap.png" width="100%"/></a>` },
+
+  { id: '3', content: `
+  # Root-me : HTML - boutons désactivés
+  ### Infos
+  - Difficulté : 1/5
+  - Url : [HTML - boutons désactivés](https://www.root-me.org/fr/Challenges/Web-Client/HTML-boutons-desactives)
+  
+  ### Compréhension
+  - Objectifs
+    - Valider le formulaire
+
+  - Contexte technique
+    - Les champs sont disable
+
+  ### Résolution
+  - En utilisant l'inspecteur on peut modifier les champs et enlever les disable
+  <a href="/images/challenge-1/challenge-1-begin.jpg"><img src="/images/challenge-1/challenge-1-begin.jpg" width="100%"/></a>
+  - Le formulaire peut ensuite être validé avec n'importe quels identifiants
+  <a href="/images/challenge-1/challenge-1-complete.jpg"><img src="/images/challenge-1/challenge-1-complete.jpg" width="100%"/></a>
+  
+  ### Résultat
+  - Flag : HTMLCantStopYou
+
+  ### Prévention
+  - Le front ne devrait être que du style et pas des vérifications ou de la sécurité seulement de l'affichage, donc mettre
+  des vrais vérifications dans le back
+  ` },
+  { id: '4', content: `
+  # Root-me : Javascript - Authentification
+  ### Infos
+  - Difficulté : 1/5
+  - Url : [Javascript - Authentification]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '5', content: `
+  # Root-me : Javascript - Source
+  ### Infos
+  - Difficulté : 1/5
+  - Url : [Javascript - Source]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '6', content: `
+  # Root-me : Javascript - Authentification 2
+  ### Infos
+  - Difficulté : 1/5
+  - Url : [Javascript - Authentification 2]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '7', content: `
+  # Root-me : Javascript - Obfuscation 1
+  ### Infos
+  - Difficulté : 1/5
+  - Url : [Javascript - Obfuscation 1]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '8', content: `
+  # Root-me : Javascript - Obfuscation 2
+  ### Infos
+  - Difficulté : 1/5
+  - Url : [Javascript - Obfuscation 2]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '9', content: `
+  # Root-me : Javascript - Native code
+  ### Infos
+  - Difficulté : 2/5
+  - Url : [Javascript - Native code]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '10', content: `
+  # Root-me : Javascript - Webpack
+  ### Infos
+  - Difficulté : 2/5
+  - Url : [Javascript - Webpack]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '11', content: `
+  # Root-me : Javascript - Obfuscation 3
+  ### Infos
+  - Difficulté : 3/5
+  - Url : [Javascript - Obfuscation 3]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '12', content: `
+  # Root-me : XSS - Stockée 1
+  ### Infos
+  - Difficulté : 3/5
+  - Url : [XSS - Stockée 1]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` },
+  { id: '13', content: `
+  # Root-me : AST - Deobfuscation
+  ### Infos
+  - Difficulté : 3/5
+  - Url : [AST - Deobfuscation]()
+  
+  ### Compréhension
+  - Objectifs
+    - 
+
+  - Contexte technique
+    - 
+
+  ### Résolution
+  - 
+  
+  ### Résultat
+  - Flag : 
+
+  ### Prévention
+  - 
+  ` }
 ]
 
 export default {
