@@ -85,10 +85,10 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   
   ### Compréhension
   - Objectifs
-    - Valider le formulaire
+    - Utiliser l'inspecteur
 
   - Contexte technique
-    - Les champs sont disable
+    - Un formulaire avec des champs disable
 
   ### Résolution
   - En utilisant l'inspecteur on peut modifier les champs et enlever les disable
@@ -107,89 +107,107 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   # Root-me : Javascript - Authentification
   ### Infos
   - Difficulté : 1/5
-  - Url : [Javascript - Authentification]()
+  - Url : [Javascript - Authentification](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Authentification)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source
 
   - Contexte technique
-    - 
+    - Un formulaire à remplir mais nous n'avons pas les identifiants
 
   ### Résolution
-  - 
+  - En utilisant le débogueur on peut accéder au fichier js et donc voir les valeurs de comparaison
+  <a href="/images/challenge-2/challenge-2-begin.jpg"><img src="/images/challenge-2/challenge-2-begin.jpg" width="100%"/></a>
+  - En rentrant ainsi ses valeurs, la connection se fait
+  <a href="/images/challenge-2/challenge-2-complete.jpg"><img src="/images/challenge-2/challenge-2-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : 
+  - Flag : sh.org
 
   ### Prévention
-  - 
+  - Ne pas mettre en clair dans le front des valeurs de sécurité
   ` },
   { id: '5', content: `
   # Root-me : Javascript - Source
   ### Infos
   - Difficulté : 1/5
-  - Url : [Javascript - Source]()
+  - Url : [Javascript - Source](www.root-me.org/fr/Challenges/Web-Client/Javascript-Source)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source
 
   - Contexte technique
-    - 
+    - Un alert où il faut mettre un mot de passe que l'on ne possède pas
 
   ### Résolution
-  - 
+  - En utilisant le débogueur on peut accéder au fichier js et donc voir la valeur de comparaison
+  <a href="/images/challenge-3/challenge-3-begin.jpg"><img src="/images/challenge-3/challenge-3-begin.jpg" width="100%"/></a>
+  - En rentrant ainsi le mot de passe, l'alert est validée
+  <a href="/images/challenge-3/challenge-3-complete.jpg"><img src="/images/challenge-3/challenge-3-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : 
+  - Flag : 123456azerty
 
   ### Prévention
-  - 
+  - Ne pas mettre en clair dans le front des valeurs de sécurité
   ` },
   { id: '6', content: `
   # Root-me : Javascript - Authentification 2
   ### Infos
   - Difficulté : 1/5
-  - Url : [Javascript - Authentification 2]()
+  - Url : [Javascript - Authentification 2](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Authentification-2)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source
 
   - Contexte technique
-    - 
+    - Un alert où il faut mettre des identifiants que l'on ne possède pas
 
   ### Résolution
-  - 
+  - En utilisant le débogueur on peut accéder au fichier js et donc voir les valeurs de comparaison
+  <a href="/images/challenge-4/challenge-4-begin.jpg"><img src="/images/challenge-4/challenge-4-begin.jpg" width="100%"/></a>
+  - En rentrant ainsi les identifiants
+  <a href="/images/challenge-4/challenge-4-username.jpg"><img src="/images/challenge-4/challenge-4-username.jpg" width="100%"/></a>
+  <a href="/images/challenge-4/challenge-4-password.jpg"><img src="/images/challenge-4/challenge-4-password.jpg" width="100%"/></a>
+  - L'alert est validée
+  <a href="/images/challenge-4/challenge-4-complete.jpg"><img src="/images/challenge-4/challenge-4-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : 
+  - Flag : HIDDEN
 
   ### Prévention
-  - 
+  - Ne pas mettre en clair dans le front des valeurs de sécurité
   ` },
   { id: '7', content: `
   # Root-me : Javascript - Obfuscation 1
   ### Infos
   - Difficulté : 1/5
-  - Url : [Javascript - Obfuscation 1]()
+  - Url : [Javascript - Obfuscation 1](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-1)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source et la console
 
   - Contexte technique
-    - 
+    - Un alert où il faut mettre un mot de passe que l'on ne possède pas
 
   ### Résolution
-  - 
+  - En utilisant le débogueur on peut accéder au fichier js et donc voir la valeur de comparaison, mais cette dernière
+  est dans un format illisible
+  <a href="/images/challenge-5/challenge-5-begin.jpg"><img src="/images/challenge-5/challenge-5-begin.jpg" width="100%"/></a>
+  - En utilisant la console pour réaliser la fonction unescape() se trouvant dans le js, on obtient le vrai mot de passe
+  <a href="/images/challenge-5/challenge-5-solution.jpg"><img src="/images/challenge-5/challenge-5-solution.jpg" width="100%"/></a>
+  - L'alert est validée
+  <a href="/images/challenge-5/challenge-5-complete.jpg"><img src="/images/challenge-5/challenge-5-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : 
+  - Flag : cpasbiendurpassword
 
   ### Prévention
-  - 
+  - Ne pas mettre dans le front des valeurs de sécurité
   ` },
   { id: '8', content: `
   # Root-me : Javascript - Obfuscation 2
@@ -208,7 +226,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - 
   
   ### Résultat
-  - Flag : 
+  - Flag : hDufjdki156
 
   ### Prévention
   - 
@@ -230,7 +248,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - 
   
   ### Résultat
-  - Flag : 
+  - Flag : toto123lol
 
   ### Prévention
   - 
@@ -252,7 +270,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - 
   
   ### Résultat
-  - Flag : 
+  - Flag : BecauseSourceMapsAreGreatForDebuggingButNotForProduction
 
   ### Prévention
   - 
@@ -274,7 +292,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - 
   
   ### Résultat
-  - Flag : 
+  - Flag : 786OsErtk12
 
   ### Prévention
   - 
@@ -296,7 +314,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - 
   
   ### Résultat
-  - Flag : 
+  - Flag : NkI9qe4cdLIO2P7MIsWS8ofD6
 
   ### Prévention
   - 
@@ -318,7 +336,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - 
   
   ### Résultat
-  - Flag : 
+  - Flag : g00d_j0b_easy_deobfuscation
 
   ### Prévention
   - 
