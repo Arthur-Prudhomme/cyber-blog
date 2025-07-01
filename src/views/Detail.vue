@@ -213,67 +213,93 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   # Root-me : Javascript - Obfuscation 2
   ### Infos
   - Difficulté : 1/5
-  - Url : [Javascript - Obfuscation 2]()
+  - Url : [Javascript - Obfuscation 2](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Obfuscation-2)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source et la console
 
   - Contexte technique
-    - 
+    - Trouver le flag dans le js
 
   ### Résolution
-  - 
+  - En utilisant le débogueur on peut accéder au fichier js et donc récupérer la valeur, mais cette dernière
+  est dans un format illisible
+  <a href="/images/challenge-6/challenge-6-begin.jpg"><img src="/images/challenge-6/challenge-6-begin.jpg" width="100%"/></a>
+  - En utilisant la console pour réaliser la fonction unescape() 2 fois en éxécutant ensuite le résultat, 
+  on obtient le flag
+  <a href="/images/challenge-6/challenge-6-complete.jpg"><img src="/images/challenge-6/challenge-6-complete.jpg" width="100%"/></a>
   
   ### Résultat
   - Flag : hDufjdki156
 
   ### Prévention
-  - 
+  - Si cette valeur devait rester secrète, il ne fallait pas la mettre dans le front
   ` },
   { id: '9', content: `
   # Root-me : Javascript - Native code
   ### Infos
   - Difficulté : 2/5
-  - Url : [Javascript - Native code]()
+  - Url : [Javascript - Native code](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Native-code)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Utiliser le débogueur / source et utiliser des outils pour convertir le script
 
   - Contexte technique
-    - 
+    - Un alert où il faut mettre un mot de passe que l'on ne possède pas
 
   ### Résolution
-  - 
+  - En utilisant le débogueur on peut accéder au fichier js et voir que le script est chiffré
+  <a href="/images/challenge-7/challenge-7-begin.jpg"><img src="/images/challenge-7/challenge-7-begin.jpg" width="100%"/></a>
+  - En utilisant l'outil Javascript Unobfuscator on peut traduir le script
+  <a href="/images/challenge-7/challenge-7-solution.jpg"><img src="/images/challenge-7/challenge-7-solution.jpg" width="100%"/></a>
+  - Et ainsi obtenir le mot de passe et valider l'alert
+  <a href="/images/challenge-7/challenge-7-complete.jpg"><img src="/images/challenge-7/challenge-7-complete.jpg" width="100%"/></a>
   
   ### Résultat
   - Flag : toto123lol
 
   ### Prévention
-  - 
+  - Ne pas mettre dans le front des valeurs de sécurité
   ` },
   { id: '10', content: `
   # Root-me : Javascript - Webpack
   ### Infos
   - Difficulté : 2/5
-  - Url : [Javascript - Webpack]()
+  - Url : [Javascript - Webpack](https://www.root-me.org/fr/Challenges/Web-Client/Javascript-Webpack)
   
   ### Compréhension
   - Objectifs
-    - 
+    - Obtenir le flag caché dans le fichier js d'origine
 
   - Contexte technique
-    - 
+    - Le site en vue.js est fait avec webpack qui bundle les fichier js et les rends "inaccessible"
 
   ### Résolution
-  - 
+  - En arrivant sur le site et en explorant le débogueur on obsèrve que malgré le fait que l'on puisse voir l'architecture,
+  les fichiers js d'origines ne sont pas présents
+  <a href="/images/challenge-8/challenge-8-begin.jpg"><img src="/images/challenge-8/challenge-8-begin.jpg" width="100%"/></a>
+  <a href="/images/challenge-8/challenge-8-duck.jpg"><img src="/images/challenge-8/challenge-8-duck.jpg" width="100%"/></a>
+  <a href="/images/challenge-8/challenge-8-mandarin-duck.jpg"><img src="/images/challenge-8/challenge-8-mandarin-duck.jpg" width="100%"/></a>
+  - En recherchant sur Stack overflow ce qu'est le commentaire dans le fichier js, on découvre qu'il sagit du nom du
+  vrai fichier
+  <a href="/images/challenge-8/challenge-8-clue.jpg"><img src="/images/challenge-8/challenge-8-clue.jpg" width="100%"/></a>
+  - En observant dans le débogueur le répertoire dans lequel se trouve les fichiers sourceMap on peut reformer l'url
+  <a href="/images/challenge-8/challenge-8-débogueur.jpg"><img src="/images/challenge-8/challenge-8-débogueur.jpg" width="100%"/></a>
+  - Une fois l'url reformée, il suffit de l'executer pour télécharger le fichier js d'origine
+  <a href="/images/challenge-8/challenge-8-url.jpg"><img src="/images/challenge-8/challenge-8-url.jpg" width="100%"/></a>
+  <a href="/images/challenge-8/challenge-8-download-file.jpg"><img src="/images/challenge-8/challenge-8-download-file.jpg" width="100%"/></a>
+  - En ouvrant le fichier dans VSCode il ne fait pas beaucoup de sens
+  <a href="/images/challenge-8/challenge-8-file.jpg"><img src="/images/challenge-8/challenge-8-file.jpg" width="100%"/></a>
+  - Cependant en réalisant une recherche pour "flag" on trouve finalement la variable
+  <a href="/images/challenge-8/challenge-8-solution.jpg"><img src="/images/challenge-8/challenge-8-solution.jpg" width="100%"/></a>
   
   ### Résultat
   - Flag : BecauseSourceMapsAreGreatForDebuggingButNotForProduction
 
   ### Prévention
-  - 
+  - Si cette valeur devait rester secrète, il ne fallait pas la mettre dans le front
   ` },
   { id: '11', content: `
   # Root-me : Javascript - Obfuscation 3
