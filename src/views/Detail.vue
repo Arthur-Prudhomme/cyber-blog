@@ -595,41 +595,40 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - [Global ransomware attack causes turmoil](https://www.bbc.com/news/technology-40416611)
 
   ` },
-  { id: '18', content: `
-  # Target (2013)
-  ### Vulnérabilité exploitée
-  
-  ### Déroulement de l'attaque
-  
-  ### Victimes
-  
-  ### Impacts
-  
-  ### Coût et taille de l'entreprise
-  
-  ### Comment s'en protéger ?
-  
-  ### Pourquoi est-ce difficile à éviter ?
-  
-  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
-  ` },
   { id: '19', content: `
-  # 
-  ### Vulnérabilité exploitée
+  # Question finale
+
+  ### Que déduisez-vous de toutes ces attaques ?
+  - La diversité des vecteurs d’attaque est énorme :
+    - Vulnérabilité logicielle non corrigée (WannaCry, Log4Shell)
+    - Attaque par chaîne d’approvisionnement (SolarWinds, NotPetya, Target)
+    - Exploitation de partenaires ou fournisseurs externes peu sécurisés (Target)
+  - Même des entreprises disposant de moyens considérables (Microsoft, Maersk, Merck, Target) peuvent être touchées si elles négligent certains maillons faibles : 
+    - Systèmes obsolètes
+    - Configurations mal sécurisées
+    - Dépendance excessive à des tiers
+  - Le facteur humain et organisationnel est clé :
+    - Beaucoup de ces attaques auraient pu être détectées ou atténuées plus tôt si les alertes avaient été prises au sérieux ou si les processus de gestion des vulnérabilités étaient matures.
+    - L'absence de segmentation réseau, de détection comportementale ou d'authentification forte a aggravé l’impact.
+  - Les conséquences sont graves, même pour des ransomwares simulés :
+    - Certaines attaques comme NotPetya ont été déguisées en ransomwares, mais visaient en réalité à détruire, pas à rançonner.
+    - Cela démontre que la motivation peut être géopolitique, et non seulement financière.
   
-  ### Déroulement de l'attaque
-  
-  ### Victimes
-  
-  ### Impacts
-  
-  ### Coût et taille de l'entreprise
-  
-  ### Comment s'en protéger ?
-  
-  ### Pourquoi est-ce difficile à éviter ?
-  
-  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  ### Quel conseil appliqueriez-vous pour éviter à votre entreprise de se faire toucher par une attaque similaire ?
+
+  - Maintenir à jour tous les systèmes et logiciels
+    - Appliquer les correctifs de sécurité dès leur publication, notamment dans le cas de failles critiques comme EternalBlue ou Log4j.
+  - Segmenter le réseau et limiter les accès
+    - Isoler les environnements critiques pour empêcher une propagation.
+  - Surveiller les partenaires et fournisseurs tiers
+    - Appliquer une gestion rigoureuse des risques fournisseurs.
+    - Restreindre leurs accès aux seuls services nécessaires.
+  - Déployer des outils de détection avancés
+    - Utiliser des solutions EDR/XDR, analyse comportementale, SIEM, détection de mouvement latéral et trafic sortant suspect.
+  - Former les équipes et simuler des incidents
+    - Sensibilisation des collaborateurs, mais aussi exercices de réponse à incident, audits de crise, et plan de reprise d’activité.
+  - Gestion des accès
+    - Ne jamais accorder plus de droits que nécessaire à un utilisateur, un service, ou un tiers.
   ` }
 ]
 
