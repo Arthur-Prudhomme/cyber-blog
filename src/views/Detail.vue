@@ -407,7 +407,7 @@ html, body, #app {
 }
 
 .detail {
-    min-height:100vh;
+  min-height:100vh;
 }
 
 .text-box {
@@ -415,7 +415,8 @@ html, body, #app {
   margin-top: 16px;
 
   color: rgb(255, 255, 255);
-  margin: 2em 25em 0 25em;
+  margin: auto;
+  width: 50vw;
   padding-bottom: 10em;
   text-align: center;
 }

@@ -50,7 +50,7 @@ html, body, #app {
 }
 
 .home {
-  height: calc(100vh - 64px); /* Assuming header is 64px */
+  height: calc(100vh-90); /* Assuming header is 64px */
   overflow-y: auto;
   padding: 16px;
   background-color: rgb(20, 20, 20);
@@ -58,7 +58,8 @@ html, body, #app {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 2em 15em 0 15em;
+  width: 75vw;
+  margin:auto;
   gap: 16px;
 }
 </style>
