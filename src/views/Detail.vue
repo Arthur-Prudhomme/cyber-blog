@@ -381,6 +381,255 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 
   ### Prévention
   - Ne pas mettre une valeur secrète dans un AST car il est réversible
+  ` },
+  { id: '14', content: `
+  # WannaCry (2017)
+  ### Vulnérabilité exploitée
+  - WannaCry a exploité une vulnérabilité dans le protocole SMBv1 de Microsoft Windows, identifiée comme CVE-2017-0144.
+  - Cette faille, surnommée EternalBlue, avait été initialement développée par la NSA puis rendue publique par le groupe de hackers Shadow Brokers en avril 2017.
+  - Microsoft avait pourtant publié un correctif (MS17-010) en mars 2017, deux mois avant l’attaque, mais de nombreuses machines ne l’avaient pas appliqué.
+  
+  ### Déroulement de l'attaque
+  - Le 12 mai 2017, le ransomware WannaCry s’est propagé à grande échelle, utilisant EternalBlue pour infecter les ordinateurs via SMB.
+  - Une fois la machine infectée, WannaCry chiffré les fichiers et affichait une demande de rançon de 300 à 600 $ en Bitcoin, avec un compte à rebours.
+  - Il se comportait comme un ver informatique, se propageant automatiquement à d’autres machines vulnérables sur le réseau.
+  - L’attaque a ralenti grâce à un kill switch découvert accidentellement par un chercheur en sécurité connu sous le pseudo MalwareTech.
+
+  ### Victimes
+  - L’attaque a touché plus de 230 000 ordinateurs dans 150 pays.
+  - Victimes notables :
+    - NHS (système de santé britannique)
+    - Renault-Nissan
+    - FedEx
+    - Deutsche Bahn
+    - Ministères et universités en Chine, Russie, Inde, etc.
+
+  ### Impacts
+  - Systèmes paralysés (urgences, transports, usines).
+  - Perturbation massive des soins au NHS, avec des opérations annulées.
+  - Fichiers chiffrés, données parfois perdues définitivement.
+  - Confiance dans la cybersécurité fortement ébranlée à l’échelle mondiale.
+
+  ### Coût et taille de l'entreprise
+  - Le coût total estimé mondialement est compris entre 4 et 8 milliards de dollars.
+  - Aucune rançon significative n’a été payée : les pirates n’avaient pas mis en place un système efficace pour suivre les paiements.
+  - Les entreprises touchées étaient de toutes tailles, des hôpitaux publics aux multinationales.
+
+  ### Comment s'en protéger ?
+  - Appliquer rapidement les mises à jour de sécurité (MS17-010 dans ce cas).
+  - Désactiver SMBv1 sur les systèmes Windows.
+  - Utiliser un antivirus à jour et des pare-feux correctement configurés.
+  - Sauvegarder régulièrement les données hors-ligne.
+  - Sensibiliser les employés aux risques de phishing et aux bonnes pratiques.
+
+  ### Pourquoi est-ce difficile à éviter ?
+  - Beaucoup de systèmes (notamment dans la santé et l’industrie) utilisent des logiciels obsolètes non patchés.
+  - Manque de budget et de compétences en cybersécurité dans certains secteurs.
+  - Propagation automatique : une seule machine non protégée peut contaminer tout un réseau.
+  - Les correctifs existent souvent, mais la gestion des mises à jour est négligée.
+  
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  - Mettre à jour les systèmes aux versions les plus stables
+
+  ### Sources
+  - [Microsoft Security Bulletin MS17-010 - Critical](https://learn.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010)
+  - [Massive ransomware infection hits computers in 99 countries](https://www.bbc.com/news/technology-39901382)
+  - [NIST Report](https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8200.pdf)
+  
+  ` },
+  { id: '15', content: `
+  # Log4Shell (2021)
+  ### Vulnérabilité exploitée
+  - La faille Log4Shell (CVE-2021-44228) est une vulnérabilité critique découverte dans Apache Log4j 2, une bibliothèque de journalisation Java très utilisée.
+  - Elle permettait l'exécution de code à distance (RCE) via une simple chaîne de texte malveillante enregistrée dans les logs, grâce à la fonctionnalité de lookup JNDI.
+  - Notée 10/10 sur l’échelle CVSS.
+
+  ### Déroulement de l'attaque
+  - La faille a été rendue publique le 9 décembre 2021, bien qu'elle ait été exploitée plusieurs jours avant sa divulgation.
+  - Un attaquant pouvait insérer une chaîne dans un champ de formulaire, un entête HTTP, un pseudo de jeu, etc.
+  - Log4j récupérait cette URL, déclenchait une requête JNDI, et exécutait le code distant renvoyé par le serveur malveillant.
+  - La simplicité de l’exécution (une seule ligne dans un log) a permis une explosion d’attaques automatisées en quelques heures.
+
+  ### Victimes
+  - Des milliers d’entreprises et de services web ont été affectés, notamment :
+    - Apple, Amazon, Twitter, Google, Steam, Minecraft, Cloudflare, etc.
+    - Le service Minecraft Java Edition a été un des premiers ciblés, via les champs de chat.
+  - Des attaques ont visé aussi bien les grandes entreprises que les systèmes open source ou auto-hébergés.
+
+  ### Impacts
+  - Accès non autorisé à des serveurs internes, vol de données, déploiement de malware et de cryptominers.
+  - De nombreux groupes APT (Chine, Iran, Corée du Nord) ont exploité la faille pour du cyberespionnage.
+  - Le CERT allemand (BSI) a qualifié la faille de "catastrophique".
+
+  ### Coût et taille de l'entreprise
+  - Impossible à quantifier précisément, mais l’impact est considéré comme l’un des plus importants de l’histoire du logiciel open source.
+  - L’entreprise concernée directement par le composant vulnérable (la Apache Software Foundation) est une organisation à but non lucratif.
+  - Des coûts de patching massif, audits de sécurité, et mises à jour de logiciels tiers ont été rapportés dans toutes les grandes entreprises.
+
+  ### Comment s'en protéger ?
+  - Mettre à jour Log4j vers la version 2.17.1 ou ultérieure, où la vulnérabilité est corrigée.
+  - Désactiver les lookups JNDI si la mise à jour immédiate n'est pas possible.
+  - Analyser les journaux et le trafic réseau pour détecter les tentatives d’exploitation.
+  - Utiliser des WAFs ou IDS/IPS pour bloquer les signatures d’attaques connues.
+  - Mettre en place une gestion stricte des dépendances dans les projets logiciels.
+
+  ### Pourquoi est-ce difficile à éviter ?
+  - Log4j est utilisé de manière indirecte par des milliers de logiciels et librairies Java.
+  - Les entreprises ignoraient parfois qu’elles utilisaient Log4j, ce qui a compliqué la détection de l’exposition.
+  - Il est difficile de patcher immédiatement tous les services critiques en production.
+  - La faille est très facile à exploiter et largement automatisée.
+
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  - Mettre à jour les systèmes aux versions les plus stables
+  - Gestion stricte des dépendances dans les projets
+
+  ### Sources
+  - [CISA Apache Log4j Vulnerability Guidance](https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance)
+  - [Wired : The Internet Is on Fire](https://www.wired.com/story/log4j-flaw-hacking-internet/)
+  
+  ` },
+  { id: '16', content: `
+  # SolarWinds (2020)
+  ### Vulnérabilité exploitée
+  - Le piratage de SolarWinds n’a pas exploité une vulnérabilité logicielle classique, mais une chaîne d'approvisionnement logicielle ("supply chain attack").
+  - Les attaquants ont compromis le processus de compilation du logiciel Orion de SolarWinds, y injectant un malware furtif nommé SUNBURST.
+  - Ce malware était ensuite diffusé automatiquement aux clients via une mise à jour légitime du logiciel.
+
+  ### Déroulement de l'attaque
+  - L’attaque a commencé dès mars 2020, mais n’a été découverte qu’en décembre 2020 par l’entreprise de cybersécurité FireEye, elle-même victime.
+  - Le malware SUNBURST a été introduit dans des mises à jour logicielles d’Orion entre mars et juin 2020, installées par environ 18 000 clients.
+  - Une fois installé, SUNBURST établissait une communication discrète avec un serveur de commande & contrôle (C2), permettant à l’attaquant de choisir les cibles à compromettre davantage.
+  - Une deuxième phase manuelle permettait aux attaquants de voler des données ou de déployer d’autres outils d’intrusion.
+
+  ### Victimes
+  - Environ 18 000 organisations ont reçu la mise à jour corrompue.
+  - Parmi les cibles confirmées :
+    - U.S. Departments : Trésor, Commerce, Énergie, Justice, Homeland Security.
+    - Entreprises privées : Microsoft, Cisco, Intel, FireEye, VMWare.
+    - Organisations internationales : OTAN, agences gouvernementales de l’UE.
+
+  ### Impacts
+  - Espionnage massif : vol d'e-mails, de documents internes, et de certificats d'accès.
+  - Compromission de chaînes de confiance au sein de l’écosystème logiciel.
+  - Perturbation des relations diplomatiques, notamment entre les États-Unis et la Russie.
+  - Une enquête fédérale a conclu que le groupe responsable est probablement lié au SVR, les services de renseignement russes.
+
+  ### Coût et taille de l'entreprise
+  - SolarWinds, une entreprise américaine spécialisée dans les logiciels de gestion d'infrastructure IT, comptait plus de 300 000 clients avant l’attaque.
+  - En 2021, le coût estimé pour les entreprises victimes et les gouvernements dépasse 100 millions de dollars, sans compter les coûts indirects (réputation, audits, législation).
+  - Microsoft à lui seul a indiqué avoir mobilisé 500 ingénieurs pour répondre à la menace.
+
+  ### Comment s'en protéger ?
+  - Mettre en place une surveillance rigoureuse de la chaîne d’approvisionnement logicielle.
+  - Renforcer les contrôles d'intégrité sur les processus de compilation et de livraison.
+  - Déployer une détection comportementale avancée sur les réseaux (EDR, XDR).
+  - Appliquer une politique de moindre privilège et segmenter les réseaux.
+  - Superviser les accès à privilèges et auditer les connexions sortantes anormales.
+
+  ### Pourquoi est-ce difficile à éviter ?
+  - Les attaques de la supply chain sont discrètes, longues à détecter, et touchent les logiciels de confiance.
+  - Même des clients ayant de fortes mesures de sécurité n’ont pas pu anticiper une menace venant d’un fournisseur légitime.
+  - Le niveau de sophistication des attaquants (APT29/SVR) était tel que la détection immédiate était quasiment impossible.
+  
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  - Protéger et contrôler les accès à privilèges.
+
+  ### Sources
+  - [NIST Supply Chain](https://csrc.nist.gov/pubs/sp/800/161/r1/ipd)
+  - [Highly Evasive Attacker Leverages SolarWinds](https://cloud.google.com/blog/topics/threat-intelligence/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor?hl=en)
+
+  ` },
+  { id: '17', content: `
+  # NotPetya (2017)
+  ### Vulnérabilité exploitée
+  - NotPetya exploitait notamment la faille EternalBlue dans SMBv1 (CVE-2017-0144), la même que celle utilisée par WannaCry, permettant l’exécution de code à distance.
+  - Elle utilisait aussi CVE-2017-0199, une vulnérabilité dans Microsoft Office, et volait des identifiants via Mimikatz pour se propager latéralement sur le réseau.
+  - Le malware a été diffusé initialement par une mise à jour compromise du logiciel de comptabilité ukrainien M.E.Doc, utilisée massivement dans les entreprises locales.
+
+  ### Déroulement de l'attaque
+  - L'attaque a commencé le 27 juin 2017, en Ukraine, via une mise à jour malveillante du logiciel M.E.Doc.
+  - Une fois installé, NotPetya se propageait automatiquement dans le réseau via EternalBlue, PsExec, et WMIC.
+  - Il chiffrait les fichiers critiques et le MBR (Master Boot Record), rendant les machines inaccessibles.
+  - Bien qu’il affichait une demande de rançon, NotPetya était en réalité un wiper, rendant les données irrécupérables.
+
+  ### Victimes
+  - L’attaque a commencé en Ukraine mais s’est rapidement propagée à l’échelle mondiale.
+  - Victimes notables :
+    - Maersk (géant du transport maritime)
+    - Rosneft (Russie)
+    - Merck (pharma)
+    - Mondelez (alimentation)
+    - Saint-Gobain (industrie)
+    - Ministères, banques et infrastructures ukrainiennes
+  
+  ### Impacts
+  - Paralysie de systèmes industriels, chaînes logistiques, et réseaux d’entreprise.
+  - Des milliers de machines rendues inutilisables, pertes massives de données.
+  - Maersk a dû réinstaller 45 000 PC et 4 000 serveurs.
+  - L’attaque a été attribuée par les gouvernements occidentaux au groupe Sandworm, lié au GRU, le renseignement militaire russe.
+
+  ### Coût et taille de l'entreprise
+  - Le coût total mondial est estimé entre 10 et 12 milliards de dollars, ce qui fait de NotPetya l’attaque la plus coûteuse de l’histoire jusqu’à ce jour.
+  - Maersk a déclaré un coût direct de 300 millions de dollars, Merck plus de 870 millions.
+  - L’attaque a touché des entreprises de toute taille, mais surtout de grandes multinationales.
+
+  ### Comment s'en protéger ?
+  - Appliquer les mises à jour de sécurité Windows (notamment celles corrigeant SMBv1).
+  - Désactiver SMBv1 sur tous les systèmes.
+  - Segmenter le réseau pour limiter la propagation.
+  - Utiliser des outils EDR pour détecter les mouvements latéraux.
+  - Mettre en place des sauvegardes hors-ligne et des plans de reprise d’activité.
+
+  ### Pourquoi est-ce difficile à éviter ?
+  - NotPetya s'est diffusé via un fournisseur logiciel local de confiance, difficile à surveiller pour les entreprises étrangères.
+  - Les mécanismes de propagation automatiques (SMB, PsExec, WMIC) rendent l'attaque rapide et incontrôlable une fois qu’une seule machine est infectée.
+  - L’usage d’un wiper déguisé en ransomware a trompé de nombreuses entreprises sur la véritable nature de l’attaque.
+
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  - Mettre à jour les systèmes aux versions les plus stables.
+  - Segmenter le réseau pour limiter la propagation.
+
+  ### Sources
+  - [Vulnérabilité d’exécution de code à distance dans le serveur SMB Windows](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2017-0144)
+  - [Cisco Talos Blog](https://blog.talosintelligence.com/worldwide-ransomware-variant/)
+  - [Global ransomware attack causes turmoil](https://www.bbc.com/news/technology-40416611)
+
+  ` },
+  { id: '18', content: `
+  # Target (2013)
+  ### Vulnérabilité exploitée
+  
+  ### Déroulement de l'attaque
+  
+  ### Victimes
+  
+  ### Impacts
+  
+  ### Coût et taille de l'entreprise
+  
+  ### Comment s'en protéger ?
+  
+  ### Pourquoi est-ce difficile à éviter ?
+  
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  ` },
+  { id: '19', content: `
+  # 
+  ### Vulnérabilité exploitée
+  
+  ### Déroulement de l'attaque
+  
+  ### Victimes
+  
+  ### Impacts
+  
+  ### Coût et taille de l'entreprise
+  
+  ### Comment s'en protéger ?
+  
+  ### Pourquoi est-ce difficile à éviter ?
+  
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
   ` }
 ]
 

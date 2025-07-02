@@ -35,6 +35,11 @@ export default {
         { id: 11, title: 'Root-Me : Javascript - Obfuscation 3', description: 'Root-me challenge',image: '/images/challenge-9/challenge-9-begin.jpg' },
         { id: 12, title: 'Root-Me : XSS - Stockée 1', description: 'Root-me challenge',image: '/images/challenge-10/challenge-10-begin.jpg' },
         { id: 13, title: 'Root-Me : AST - Deobfuscation', description: 'Root-me challenge',image: '/images/challenge-11/challenge-11-ast.jpg' },
+        { id: 14, title: 'WannaCry (2017)', description: '',image: '/images/background.jpg' },
+        { id: 15, title: 'Log4Shell (2021)', description: '',image: '/images/background.jpg' },
+        { id: 16, title: 'SolarWinds (2020)', description: '',image: '/images/background.jpg' },
+        { id: 17, title: 'NotPetya (2017)', description: '',image: '/images/background.jpg' },
+        { id: 18, title: 'Target (2013)', description: '',image: '/images/background.jpg' },
       ]
     }
   }
