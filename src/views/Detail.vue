@@ -16,7 +16,10 @@ const pages = [
   { 
     id: '1',
     content: 
-    `# Saint-Nazaire - Cyberattaque 2024
+    `
+<img src="/images/saint-nazaire.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
+# Saint-Nazaire - Cyberattaque 2024
 
 ## Cible
 
@@ -73,11 +76,14 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   { 
     id: '2', 
     content: 
-  `# Enjeux dans la Finance
-
+    `
+  # Enjeux dans la Finance
+  
   <a href="/images/mindmap.png"><img src="/images/mindmap.png" width="100%"/></a>` },
 
   { id: '3', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : HTML - boutons désactivés
   ### Infos
   - Difficulté : 1/5
@@ -104,6 +110,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   des vrais vérifications dans le back
   ` },
   { id: '4', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+  
   # Root-me : Javascript - Authentification
   ### Infos
   - Difficulté : 1/5
@@ -129,6 +137,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre en clair dans le front des valeurs de sécurité
   ` },
   { id: '5', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Source
   ### Infos
   - Difficulté : 1/5
@@ -154,6 +164,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre en clair dans le front des valeurs de sécurité
   ` },
   { id: '6', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Authentification 2
   ### Infos
   - Difficulté : 1/5
@@ -182,6 +194,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre en clair dans le front des valeurs de sécurité
   ` },
   { id: '7', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Obfuscation 1
   ### Infos
   - Difficulté : 1/5
@@ -210,6 +224,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre dans le front des valeurs de sécurité
   ` },
   { id: '8', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Obfuscation 2
   ### Infos
   - Difficulté : 1/5
@@ -237,6 +253,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Si cette valeur devait rester secrète, il ne fallait pas la mettre dans le front
   ` },
   { id: '9', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Native code
   ### Infos
   - Difficulté : 2/5
@@ -264,6 +282,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre dans le front des valeurs de sécurité
   ` },
   { id: '10', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Webpack
   ### Infos
   - Difficulté : 2/5
@@ -302,6 +322,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Si cette valeur devait rester secrète, il ne fallait pas la mettre dans le front
   ` },
   { id: '11', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : Javascript - Obfuscation 3
   ### Infos
   - Difficulté : 3/5
@@ -329,6 +351,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre dans le front des valeurs de sécurité
   ` },
   { id: '12', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : XSS - Stockée 1
   ### Infos
   - Difficulté : 3/5
@@ -358,6 +382,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas laisser du code être validé dans un champ de texte, par exemple en interdisant les caractères spéciaux
   ` },
   { id: '13', content: `
+  <img src="/images/rootme.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Root-me : AST - Deobfuscation
   ### Infos
   - Difficulté : 3/5
@@ -383,6 +409,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Ne pas mettre une valeur secrète dans un AST car il est réversible
   ` },
   { id: '14', content: `
+  <img src="/images/wannaCry.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # WannaCry (2017)
   ### Vulnérabilité exploitée
   - WannaCry a exploité une vulnérabilité dans le protocole SMBv1 de Microsoft Windows, identifiée comme CVE-2017-0144.
@@ -438,6 +466,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   
   ` },
   { id: '15', content: `
+  <img src="/images/log4Shell.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Log4Shell (2021)
   ### Vulnérabilité exploitée
   - La faille Log4Shell (CVE-2021-44228) est une vulnérabilité critique découverte dans Apache Log4j 2, une bibliothèque de journalisation Java très utilisée.
@@ -489,6 +519,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   
   ` },
   { id: '16', content: `
+  <img src="/images/solarWinds.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # SolarWinds (2020)
   ### Vulnérabilité exploitée
   - Le piratage de SolarWinds n’a pas exploité une vulnérabilité logicielle classique, mais une chaîne d'approvisionnement logicielle ("supply chain attack").
@@ -540,6 +572,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 
   ` },
   { id: '17', content: `
+  <img src="/images/notPetya.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # NotPetya (2017)
   ### Vulnérabilité exploitée
   - NotPetya exploitait notamment la faille EternalBlue dans SMBv1 (CVE-2017-0144), la même que celle utilisée par WannaCry, permettant l’exécution de code à distance.
@@ -596,6 +630,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 
   ` },
   { id: '18', content: `
+  <img src="/images/target.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Target (2013)
   ### Vulnérabilité exploitée
   - Les attaquants ont exploité un accès réseau indirect via un sous-traitant, Fazio Mechanical, une entreprise de chauffage/ventilation (HVAC).
@@ -650,6 +686,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
 
   ` },
   { id: '19', content: `
+  <img src="/images/conclusion.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Question finale
 
   ### Que déduisez-vous de toutes ces attaques ?
@@ -721,6 +759,10 @@ html, body, #app {
   width: 50vw;
   padding-bottom: 10em;
   text-align: center;
+}
+
+a{
+  color:rgb(87, 147, 215);
 }
 
 .content{
