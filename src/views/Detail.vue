@@ -595,6 +595,60 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - [Global ransomware attack causes turmoil](https://www.bbc.com/news/technology-40416611)
 
   ` },
+  { id: '18', content: `
+  # Target (2013)
+  ### Vulnérabilité exploitée
+  - Les attaquants ont exploité un accès réseau indirect via un sous-traitant, Fazio Mechanical, une entreprise de chauffage/ventilation (HVAC).
+  - Le fournisseur avait accès au portail de gestion des factures et de maintenance de Target, ce qui a permis aux hackers de pénétrer dans le réseau interne.
+  - Ensuite, un malware de type RAM scraper (BlackPOS) a été déployé sur les terminaux de paiement (POS) pour intercepter les données de cartes bancaires directement en mémoire.
+  
+  ### Déroulement de l'attaque
+  - Le piratage a eu lieu entre novembre et décembre 2013, en pleine période des fêtes.
+  - Le malware POS a été installé sur plus de 1 700 caisses enregistreuses dans les magasins Target.
+  - Les données volées comprenaient les numéros de cartes de crédit/débit, les dates d’expiration et les codes de sécurité (CVV).
+  - Les informations collectées étaient ensuite envoyées à des serveurs distants contrôlés par les attaquants.
+
+  ### Victimes
+  - Environ 110 millions de clients ont été affectés :
+    - 40 millions de cartes de crédit/débit compromises.
+    - 70 millions d’enregistrements supplémentaires contenant des noms, adresses, numéros de téléphone et e-mails.
+  - Les détenteurs de cartes de banques américaines (JPMorgan, Chase, Bank of America, etc.) ont été les plus exposés.
+  
+  ### Impacts
+  - Perte de confiance massive de la part des consommateurs.
+  - Des milliers de cartes ont été revendues sur le dark web.
+  - Démission du CEO de Target, Gregg Steinhafel, en mai 2014.
+  - Multiplication des poursuites judiciaires et des enquêtes réglementaires.
+  - Le piratage a précipité l’adoption accélérée des cartes à puce EMV aux États-Unis.
+  
+  ### Coût et taille de l'entreprise
+  - Target Corp. est l’un des plus grands détaillants des États-Unis, avec plus de 1 900 magasins à l’époque.
+  - Le coût total de la cyberattaque est estimé à plus de 292 millions de dollars, dont :
+    - 18,5 millions $ en règlement avec 47 États américains.
+    - 10 millions $ en indemnisations de clients.
+    - 100 millions $ investis pour renforcer la sécurité.
+
+  ### Comment s'en protéger ?
+  - Limiter les accès réseau tiers et segmenter le réseau interne.
+  - Surveiller les connexions de fournisseurs externes avec des contrôles MFA.
+  - Utiliser des systèmes de détection d’intrusion (IDS) pour les POS.
+  - Appliquer une analyse comportementale des flux réseau et des dispositifs.
+  - Mettre en œuvre un programme de gestion des risques fournisseurs.
+
+  ### Pourquoi est-ce difficile à éviter ?
+  - Les grandes entreprises ont souvent des partenaires tiers peu sécurisés (chaîne faible).
+  - Les POS sont des systèmes critiques souvent mal surveillés.
+  - Les alertes avaient été générées mais non traitées à temps par le SOC de Target.
+  - Les outils de sécurité étaient présents mais mal configurés ou sous-utilisés.
+
+  ### Dans le contexte de votre entreprise, que feriez-vous pour l'éviter ?
+  - Mettre à jour les systèmes aux versions les plus stables.
+  - Segmenter le réseau pour limiter la propagation.
+
+  ### Sources
+  - [Target Hackers Broke in Via HVAC Company](https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/)
+
+  ` },
   { id: '19', content: `
   # Question finale
 
