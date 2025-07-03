@@ -770,6 +770,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - [2023] :	Atomic Wallet, Stake.com…	Vols > 100 M$ et 41 M$ respectivement
   
   - [2025] :	Bybit	Vol record de 1,5 Md$ (Ethereum) 
+  <a href="/images/lazarus-timeline.jpg"><img src="/images/lazarus-timeline.jpg" width="100%"/></a>
 
   ### Arsenal technique
   - Malwares
@@ -848,6 +849,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - [Medium](https://medium.com/%40InfoSecDion/unpacking-apt38-static-and-dynamic-analysis-of-lazarus-group-malware-d2828e0fd6f0)
   ` },
   { id: '21', content: `
+  <img src="/images/lapsus.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Lapsus$
 
   ### Identification du groupe
@@ -873,8 +876,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - [Mars 2022] :	Samsung	190 Go de données internes, code bootloader et biométrique
   
   - [Mars 2022] :	Mercado Libre, Ubisoft, Vodafone, Microsoft, T‑Mobile	Compilation de données sensibles et codes sources
-  
-  - [2022] :	Arrestations	Sept adolescents arrêtés au Royaume‑Uni, Brésil 
+  <a href="/images/lapsus-timeline.jpg"><img src="/images/lapsus-timeline.jpg" width="100%"/></a>
 
   ### Arsenal technique
   - Méthodes d’intrusion
@@ -973,6 +975,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - [Flashpoint](https://www.flashpoint.io/blog/lapsus/)
   ` },
   { id: '22', content: `
+  <img src="/images/conti-blackcat.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Conti/BlackCat
 
   ### 1. Identification du groupe
@@ -992,20 +996,21 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
     - BlackCat : triple extorsion (chiffrement, données, DDoS)
 
   ### 2. Historique des opérations
-  - Fin 2019 – début 2020 : premières variantes de Conti
+  - [Fin 2019] – début 2020 : premières variantes de Conti
 
-  - 2020–2021 : croissance rapide, attaques “big game hunting”, milliers de victimes, CA estimé > 150 M$
+  - [2020–2021] : croissance rapide, attaques “big game hunting”, milliers de victimes, CA estimé > 150 M$
 
-  - 2021 :
+  - [2021] :
     - Utilisation de TrickBot, puis BazarLoader pour l’initial access
     - Exploits ProxyShell, PrintNightmare, Zerologon
     - Fuite interne d’un playbook en août
 
-  - 2022 :
+  - [2022] :
     - Déclarations de soutien à la Russie, fuites massives de logs (~60 000 messages)
     - Effondrement après attaque de Costa Rica, prime US de 15 M$ pour information
 
-  - Nov 2021–présent : apparition de BlackCat/ALPHV, écrite en Rust, triple extorsion, centaines de victimes
+  - [Nov 2021] : apparition de BlackCat/ALPHV, écrite en Rust, triple extorsion, centaines de victimes
+  <a href="/images/conti-blackcat-timeline.jpg"><img src="/images/conti-blackcat-timeline.jpg" width="100%"/></a>
 
   ### 3. Arsenal technique
   - Vecteurs initiaux :
