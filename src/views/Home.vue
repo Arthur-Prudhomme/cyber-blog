@@ -1,8 +1,18 @@
 <template>
   <div class="home">
+    
+    <div class="filter">
+      <select id="tag-select" v-model="selectedTag">
+        <option value="all">Tous</option>
+        <option v-for="tag in tags" :key="tag" :value="tag">
+          {{ tag }}
+        </option>
+      </select>
+    </div>
+    
     <div class="cards-grid">
       <AppCard
-        v-for="card in cards"
+        v-for="card in filteredPages"
         :key="card.id"
         :id="card.id"
         :title="card.title"
@@ -15,36 +25,25 @@
 
 <script>
 import AppCard from '../components/Card.vue'
+import {pages} from '../data/pagesData.js'
 
 export default {
   name: 'Home',
   components: { AppCard },
   data() {
     return {
-      cards: [
-        { id: 1, title: 'Saint-Nazaire', description: 'Rechercher une actualité cyber',image: '/images/saint-nazaire.jpg' },
-        { id: 2, title: 'Enjeux dans la Finance', description: 'Rechercher des enjeux de cybersécurité dans un secteur',image: '/images/finance.jpg' },
-        { id: 3, title: 'Root-Me : HTML - boutons désactivés', description: 'Root-me challenge',image: '/images/challenge-1/challenge-1-begin.jpg' },
-        { id: 4, title: 'Root-Me : Javascript - Authentification', description: 'Root-me challenge',image: '/images/challenge-2/challenge-2-begin.jpg' },
-        { id: 5, title: 'Root-Me : Javascript - Source', description: 'Root-me challenge',image: '/images/challenge-3/challenge-3-begin.jpg' },
-        { id: 6, title: 'Root-Me : Javascript - Authentification 2', description: 'Root-me challenge',image: '/images/challenge-4/challenge-4-begin.jpg' },
-        { id: 7, title: 'Root-Me : Javascript - Obfuscation 1', description: 'Root-me challenge',image: '/images/challenge-5/challenge-5-begin.jpg' },
-        { id: 8, title: 'Root-Me : Javascript - Obfuscation 2', description: 'Root-me challenge',image: '/images/challenge-6/challenge-6-begin.jpg' },
-        { id: 9, title: 'Root-Me : Javascript - Native code', description: 'Root-me challenge',image: '/images/challenge-7/challenge-7-begin.jpg' },
-        { id: 10, title: 'Root-Me : Javascript - Webpack', description: 'Root-me challenge',image: '/images/challenge-8/challenge-8-begin.jpg' },
-        { id: 11, title: 'Root-Me : Javascript - Obfuscation 3', description: 'Root-me challenge',image: '/images/challenge-9/challenge-9-begin.jpg' },
-        { id: 12, title: 'Root-Me : XSS - Stockée 1', description: 'Root-me challenge',image: '/images/challenge-10/challenge-10-begin.jpg' },
-        { id: 13, title: 'Root-Me : AST - Deobfuscation', description: 'Root-me challenge',image: '/images/challenge-11/challenge-11-ast.jpg' },
-        { id: 14, title: 'WannaCry (2017)', description: 'Cyber-attaque',image: '/images/wannaCry.jpg' },
-        { id: 15, title: 'Log4Shell (2021)', description: 'Cyber-attaque',image: '/images/log4Shell.jpg' },
-        { id: 16, title: 'SolarWinds (2020)', description: 'Cyber-attaque',image: '/images/solarWinds.jpg' },
-        { id: 17, title: 'NotPetya (2017)', description: 'Cyber-attaque',image: '/images/notPetya.jpg' },
-        { id: 18, title: 'Target (2013)', description: 'Cyber-attaque',image: '/images/target.jpg' },
-        { id: 19, title: 'Question finale', description: 'Résumé cyber-attaques',image: '/images/conclusion.jpg' },
-        { id: 20, title: 'Lazarus Group', description: 'Groupe de hackers',image: '/images/lazarus-group.jpg' },
-        { id: 21, title: 'Lapsus$', description: 'Groupe de hackers',image: '/images/lapsus.jpg' },
-        { id: 22, title: 'Conti/BlackCat', description: 'Groupe de hackers',image: '/images/conti-blackcat.jpg' },
-      ]
+      pages,
+      selectedTag: 'all'
+    }
+  },
+  computed: {
+    tags() {
+      const allTags = this.pages.flatMap(p => p.tag || [])
+      return [...new Set(allTags)]
+    },
+    filteredPages() {
+      if (this.selectedTag === 'all') return this.pages
+      return this.pages.filter(p => p.tag.includes(this.selectedTag))
     }
   }
 }
@@ -70,5 +69,20 @@ html, body, #app {
   width: 75vw;
   margin:auto;
   gap: 16px;
+}
+
+.filter {
+  width: 75vw;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+select {
+  padding: 6px 10px;
+  font-size: 16px;
+  background-color: rgb(20, 20, 20);
+  color:white;
+  border-radius:10px;
 }
 </style>
