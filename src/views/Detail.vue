@@ -723,6 +723,8 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
     - Ne jamais accorder plus de droits que nécessaire à un utilisateur, un service, ou un tiers.
   ` },
   { id: '20', content: `
+  <img src="/images/lazarus-group.jpg" style="width:100%; height:200px; object-fit:cover; object-position:center;"/>
+
   # Lazarus Group
 
   ### Identification du groupe
@@ -818,7 +820,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   ### Contre-mesures
   - Patchs et gestion des vulnérabilités
     - cmbre contre EternalBlue et exploits connus.
-    
+
   - MFA obligatoire
     - surtout pour accès privés ou finance.
   
@@ -840,56 +842,238 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   - Plan de réponse & backup
     - préparation, tests, sauvegardes isolées.
 
+  ### Sources
+  - [Wikipedia](https://fr.wikipedia.org/wiki/Groupe_Lazarus)
+  - [Breachgrid](https://www.breachgrid.com/lazarus-group-cyber-threat-intelligence-report)
+  - [Medium](https://medium.com/%40InfoSecDion/unpacking-apt38-static-and-dynamic-analysis-of-lazarus-group-malware-d2828e0fd6f0)
   ` },
   { id: '21', content: `
   # Lapsus$
 
   ### Identification du groupe
-  - 
+  - Nom(s)
+    - Lapsus$, aussi référencé comme DEV‑0537 ou “Strawberry Tempest”
+
+  - Origine présumée
+    - internationale, avec des membres identifiés au Royaume‑Uni et au Brésil. 
+  
+  - Affiliations
+    - groupe cybercriminel non étatique, structure lâche, ~7 membres estimés (mars 2022)
+  
+  - Motivations
+    - extorsion via vol et menace de divulgation de données sensibles, recherche de notoriété autant que de profits
 
   ### Historique des opérations
-  - 
+  - [Déc 2021] : Ministère santé Brésil	Site défiguré, 50 To exfiltrés/supprimés
+  
+  - [Jan 2022] :	Cible : Okta via Sitel	Compromission RDP d’un ingénieur support, accès partiel à clients
+  
+  - [Fév–Mars 2022] :	Nvidia	Vol d’environ 1 To incluant drivers, code ; choix de lever blocage crypto “LHR”
+  
+  - [Mars 2022] :	Samsung	190 Go de données internes, code bootloader et biométrique
+  
+  - [Mars 2022] :	Mercado Libre, Ubisoft, Vodafone, Microsoft, T‑Mobile	Compilation de données sensibles et codes sources
+  
+  - [2022] :	Arrestations	Sept adolescents arrêtés au Royaume‑Uni, Brésil 
 
   ### Arsenal technique
-  - 
+  - Méthodes d’intrusion
+    - spear‑phishing
+    - SIM swapping
+    - MFA fatigue (notifications incessantes)
+    - achat de credentials
+    - campagnes de recrutement d’interne via Telegram
+  
+  - Techniques utilisées
+    - RDP 
+    - VPN
+    - VDI (Citrix, AnyDesk)
+    - exploitation de sessions token 
+    - élévation de privilèges via Jira/GitLab/Active Directory
+    - exfiltration via hébergements cloud ou services gratuits (filetransfer.io)
+  
+  - Malwares
+    - aucun ransomware classique détecté. 
+    - des scripts et outils légitimes 
+    - destruction de systèmes virtuels (cloud VMs) parfois observée
 
   ### Victimologie
-  - 
+  - Secteurs ciblés
+    - technologies (Nvidia, Microsoft), télécoms (Vodafone, T‑Mobile), jeux & divertissement (Ubisoft), e‑commerce (Mercado Libre), administrations (santé Brésil), IAM (Okta via Sitel)
+  
+  - Géographie
+    - Brésil, Royaume‑Uni, États‑Unis, global – multinationales high‑tech et institutions publiques .
+  
+  - Sélection des cibles
+    - accès interne via employés ou sous‑traitants ; recherche de gains rapides, visibilité médiatique.
 
-  ### Particularités
-  - 
+  ### 5. Particularités
+  - Signatures techniques :
+    - Absence de ransomware classique
+    - MFA fatigue / SIM swap
+    - Exfiltration rapide et publication via Telegram
 
-  ### Indicateurs de compromission
-  - 
+  - Comportements distinctifs :
+    - Recrutement actif d’insiders sur Telegram
+    - Prise de décisions collectives via votes publics
+    - Communication provocatrice
+    - Objectif de célébrité plus que de profit strict
 
-  ### Contre-mesures
-  - 
+  ### 6. Indicateurs de compromission (IOCs)
+  - IPs connues :
+    - 104.238.222[.]158
+    - 108.61.173[.]214
+    - 185.169.255[.]74
 
+  - Domaines observés :
+    - filetransfer.io
+    - mega.nz
+
+  - Extensions ou fichiers :
+    - .locked (malgré l’absence de ransomware complet)
+
+  - Techniques MITRE :
+    - T1078.002 (Use of valid accounts — cloud accounts)
+    - T1021.001 (Remote services — RDP)
+    - T1534 (Internal spear-phishing)
+    - T1556.003 (Impair MFA via MFA fatigue)
+    - T1082 (System information discovery)
+
+  ### 7. Contre-mesures
+  - Contre MFA fatigue et SIM swap :
+    - Sensibiliser les employés à refuser les notifications suspectes
+    - Activer le MFA basé sur des tokens matériels (YubiKey, etc.)
+
+  - Surveillance proactive :
+    - Logs VPN, RDP, VDI
+    - Impossible travel et connexions anormales
+
+  - Protection des comptes privilégiés :
+    - Rotation des identifiants
+    - MFA fort obligatoire
+    - Surveillance des accès aux dépôts internes
+
+  - Détection d’insiders :
+    - Alertes sur comportements anormaux
+    - Programmes de sensibilisation
+
+  - Filtrage des IOCs :
+    - Blocage des IPs et domaines connus
+
+  - Segmentation réseau :
+    - Limitation des mouvements latéraux
+
+  - Plan de réponse :
+    - Backups hors-ligne
+    - Procédures de crise testées
+
+  ### Sources
+  - [Wikipedia](https://en.wikipedia.org/wiki/Lapsus%24)
+  - [Wired](https://www.wired.com/story/lapsus-hacking-group-extortion-nvidia-samsung)
+  - [Flashpoint](https://www.flashpoint.io/blog/lapsus/)
   ` },
   { id: '22', content: `
   # Conti/BlackCat
 
-  ### Identification du groupe
-  - 
+  ### 1. Identification du groupe
+  - Nom(s) :
+    - Conti (rançongiciel/RaaS)
+    - BlackCat (aka ALPHV, AlphaVM)
 
-  ### Historique des opérations
-  - 
+  - Origine présumée :
+    - Russie (membres russophones, soutien tacite)
 
-  ### Arsenal technique
-  - 
+  - Affiliations :
+    - Conti : modèle Ransomware-as-a-Service, affilié à TrickBot/Wizard Spider
+    - BlackCat : dérivé de DarkSide/BlackMatter, écrit en Rust, triple extorsion
 
-  ### Victimologie
-  - 
+  - Motivations :
+    - Conti : double extorsion (chiffrement + fuite de données), gains financiers élevés
+    - BlackCat : triple extorsion (chiffrement, données, DDoS)
 
-  ### Particularités
-  - 
+  ### 2. Historique des opérations
+  - Fin 2019 – début 2020 : premières variantes de Conti
 
-  ### Indicateurs de compromission
-  - 
+  - 2020–2021 : croissance rapide, attaques “big game hunting”, milliers de victimes, CA estimé > 150 M$
 
-  ### Contre-mesures
-  - 
+  - 2021 :
+    - Utilisation de TrickBot, puis BazarLoader pour l’initial access
+    - Exploits ProxyShell, PrintNightmare, Zerologon
+    - Fuite interne d’un playbook en août
 
+  - 2022 :
+    - Déclarations de soutien à la Russie, fuites massives de logs (~60 000 messages)
+    - Effondrement après attaque de Costa Rica, prime US de 15 M$ pour information
+
+  - Nov 2021–présent : apparition de BlackCat/ALPHV, écrite en Rust, triple extorsion, centaines de victimes
+
+  ### 3. Arsenal technique
+  - Vecteurs initiaux :
+    - Phishing, maldocs (Word/Excel), TrickBot, Emotet, BazarLoader, exploits (Exchange ProxyShell, PrintNightmare, Zerologon)
+
+  - Mouvements latéraux & privilèges :
+    - Cobalt Strike, Mimikatz, PsExec, WMIC, WMI, Rclone, outils Sysinternals, pass-the-hash/ticket
+
+  - Persistence :
+    - Services Windows, tâches planifiées, modifications registre, comptes locaux 
+
+  - Chiffrement & exfiltration :
+    - Conti : AES → ChaCha, multi‑threads (32+), double/extorsion, suppression de sauvegardes
+    - BlackCat : Rust, Emotet, ExMatter, Eamfo, GoogleAds pour malvertising, triple extorsion
+
+  ### 4. Victimologie
+  - Secteurs ciblés :
+    - Conti : santé (HSE Irlande), gouvernements (Costa Rica), finance, industrie, transport, industrie, ONG
+    - BlackCat : énergie, technologie, transport, universités, administrations (ex : MGM, Caesars)
+
+  - Géographie :
+    - Mondiale : Amérique du Nord, Europe, Asie, Amérique latine
+
+  - Cibles :
+    - Organisations critiques, avec forte capacité de paiement, infrastructures essentielles
+
+  ### 5. Particularités
+  - Signatures techniques :
+    - Conti : chiffrement ultra rapide, migration AES→ChaCha, double extorsion, suppression de sauvegardes
+    - BlackCat : Rust (cross‑platform), triple extorsion, malvertising via Google Ads, fuite public accessible
+
+  - Comportements distinctifs :
+    - Organisation de type entreprise (HR, Finance, OSINT, reversers)
+    - Conti a planifié soutien politique, liens discrets au FSB
+
+  ### 6. Indicateurs de compromission (IOCs)
+  - Hashs :
+    - fb49dce92f9a028a1da3045f705a574f3c1997fe947e2c69699b17f07e5a552b (Conti)
+
+  - IPs / domaines C2 :
+    - 23.106.160[.]77, 23.106.215[.]61, 23.82.19[.]173, Gojihu.com, Sazoya.com, Yawero.com
+
+  - Techniques MITRE :
+    - T1566, T1210, T1133, T1041, T1078.002…
+
+  ### 7. Contre‑mesures
+  - Prévention :
+    - Patchs (Exchange, SMB, Zerologon, PrintNightmare)
+    - Blocage des vecteurs d’accès (TrickBot, Emotet, BazarLoader)
+    
+  - Détection :
+    - Monitorage EDR/IDS : activités Cobalt Strike, exfiltration avec Rclone, suppression de journaux
+    - Analyse TLS/HTTP/S SL vers IPs/domains IoCs
+
+  - Renforcement :
+    - MFA robuste, segmentation, limitation des privilèges, rotation d’identifiants
+
+  - Sauvegarde & réponse :
+    - Backups hors-ligne, scripts immuables, réponse rapide
+
+  - Threat Intelligence :
+    - Intégration d’IOCs, participation à programmes de partage, veille active
+
+  ### Sources
+  - [Wired](https://www.wired.com/story/conti-ransomware-russia)
+  - [ThreatIntelligence](https://www.threatintelligence.com/blog/conti-ransomware-gang)
+  - [Trend Micro](https://www.trendmicro.com/vinfo/br/security/news/ransomware-by-the-numbers/lockbit-conti-and-blackcat-lead-pack-amid-rise-in-active-raas-and-extortion-groups-ransomware-in-q1-2022)
+  - [Wikipedia](https://fr.wikipedia.org/wiki/BlackCat_(ran%C3%A7ongiciel))
   ` }
 ]
 

@@ -41,7 +41,7 @@ export default {
         { id: 17, title: 'NotPetya (2017)', description: 'Cyber-attaque',image: '/images/notPetya.jpg' },
         { id: 18, title: 'Target (2013)', description: 'Cyber-attaque',image: '/images/target.jpg' },
         { id: 19, title: 'Question finale', description: 'Résumé cyber-attaques',image: '/images/conclusion.jpg' },
-        { id: 20, title: 'Lazarus Group', description: 'Groupe de hackers',image: '/images/background.jpg' },
+        { id: 20, title: 'Lazarus Group', description: 'Groupe de hackers',image: '/images/lazarus-group.jpg' },
         { id: 21, title: 'Lapsus$', description: 'Groupe de hackers',image: '/images/background.jpg' },
         { id: 22, title: 'Conti/BlackCat', description: 'Groupe de hackers',image: '/images/background.jpg' },
       ]
