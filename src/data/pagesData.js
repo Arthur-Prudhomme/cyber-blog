@@ -97,7 +97,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-1/challenge-1-complete.jpg"><img src="/images/challenge-1/challenge-1-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : HTMLCantStopYou
+  - Flag : ***
 
   ### Prévention
   - Le front ne devrait être que du style et pas des vérifications ou de la sécurité seulement de l'affichage, donc mettre
@@ -130,7 +130,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-2/challenge-2-complete.jpg"><img src="/images/challenge-2/challenge-2-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : sh.org
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre en clair dans le front des valeurs de sécurité
@@ -162,7 +162,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-3/challenge-3-complete.jpg"><img src="/images/challenge-3/challenge-3-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : 123456azerty
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre en clair dans le front des valeurs de sécurité
@@ -196,7 +196,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-4/challenge-4-complete.jpg"><img src="/images/challenge-4/challenge-4-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : HIDDEN
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre en clair dans le front des valeurs de sécurité
@@ -230,7 +230,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-5/challenge-5-complete.jpg"><img src="/images/challenge-5/challenge-5-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : cpasbiendurpassword
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre dans le front des valeurs de sécurité
@@ -263,7 +263,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-6/challenge-6-complete.jpg"><img src="/images/challenge-6/challenge-6-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : hDufjdki156
+  - Flag : ***
 
   ### Prévention
   - Si cette valeur devait rester secrète, il ne fallait pas la mettre dans le front
@@ -296,7 +296,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-7/challenge-7-complete.jpg"><img src="/images/challenge-7/challenge-7-complete.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : toto123lol
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre dans le front des valeurs de sécurité
@@ -340,7 +340,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-8/challenge-8-solution.jpg"><img src="/images/challenge-8/challenge-8-solution.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : BecauseSourceMapsAreGreatForDebuggingButNotForProduction
+  - Flag : ***
 
   ### Prévention
   - Si cette valeur devait rester secrète, il ne fallait pas la mettre dans le front
@@ -373,7 +373,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-9/challenge-9-solution.jpg"><img src="/images/challenge-9/challenge-9-solution.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : 786OsErtk12
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre dans le front des valeurs de sécurité
@@ -408,7 +408,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-10/challenge-10-webhook.jpg"><img src="/images/challenge-10/challenge-10-webhook.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : NkI9qe4cdLIO2P7MIsWS8ofD6
+  - Flag : ***
 
   ### Prévention
   - Ne pas laisser du code être validé dans un champ de texte, par exemple en interdisant les caractères spéciaux
@@ -439,7 +439,7 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
   <a href="/images/challenge-11/challenge-11-solution.jpg"><img src="/images/challenge-11/challenge-11-solution.jpg" width="100%"/></a>
   
   ### Résultat
-  - Flag : g00d_j0b_easy_deobfuscation
+  - Flag : ***
 
   ### Prévention
   - Ne pas mettre une valeur secrète dans un AST car il est réversible
