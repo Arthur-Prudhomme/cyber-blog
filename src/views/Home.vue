@@ -35,12 +35,15 @@ export default {
         { id: 11, title: 'Root-Me : Javascript - Obfuscation 3', description: 'Root-me challenge',image: '/images/challenge-9/challenge-9-begin.jpg' },
         { id: 12, title: 'Root-Me : XSS - Stockée 1', description: 'Root-me challenge',image: '/images/challenge-10/challenge-10-begin.jpg' },
         { id: 13, title: 'Root-Me : AST - Deobfuscation', description: 'Root-me challenge',image: '/images/challenge-11/challenge-11-ast.jpg' },
-        { id: 14, title: 'WannaCry (2017)', description: '',image: '/images/wannaCry.jpg' },
-        { id: 15, title: 'Log4Shell (2021)', description: '',image: '/images/log4Shell.jpg' },
-        { id: 16, title: 'SolarWinds (2020)', description: '',image: '/images/solarWinds.jpg' },
-        { id: 17, title: 'NotPetya (2017)', description: '',image: '/images/notPetya.jpg' },
-        { id: 18, title: 'Target (2013)', description: '',image: '/images/target.jpg' },
-        { id: 19, title: 'Question finale', description: '',image: '/images/conclusion.jpg' },
+        { id: 14, title: 'WannaCry (2017)', description: 'Cyber-attaque',image: '/images/wannaCry.jpg' },
+        { id: 15, title: 'Log4Shell (2021)', description: 'Cyber-attaque',image: '/images/log4Shell.jpg' },
+        { id: 16, title: 'SolarWinds (2020)', description: 'Cyber-attaque',image: '/images/solarWinds.jpg' },
+        { id: 17, title: 'NotPetya (2017)', description: 'Cyber-attaque',image: '/images/notPetya.jpg' },
+        { id: 18, title: 'Target (2013)', description: 'Cyber-attaque',image: '/images/target.jpg' },
+        { id: 19, title: 'Question finale', description: 'Résumé cyber-attaques',image: '/images/conclusion.jpg' },
+        { id: 20, title: 'Lazarus Group', description: 'Groupe de hackers',image: '/images/background.jpg' },
+        { id: 21, title: 'Lapsus$', description: 'Groupe de hackers',image: '/images/background.jpg' },
+        { id: 22, title: 'Conti/BlackCat', description: 'Groupe de hackers',image: '/images/background.jpg' },
       ]
     }
   }

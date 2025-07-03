@@ -721,6 +721,175 @@ Le volet judiciaire de l’attaque est suivi par la section cyber du parquet de 
     - Sensibilisation des collaborateurs, mais aussi exercices de réponse à incident, audits de crise, et plan de reprise d’activité.
   - Gestion des accès
     - Ne jamais accorder plus de droits que nécessaire à un utilisateur, un service, ou un tiers.
+  ` },
+  { id: '20', content: `
+  # Lazarus Group
+
+  ### Identification du groupe
+  - Nom(s) : 
+    - Lazarus Group
+    - APT38
+    - Guardians of Peace,
+    - Whois Team
+    - TraderTraitor
+  
+  - Origine présumée :
+    - Corée du Nord, opère sous l’égide du Reconnaissance General Bureau (RGB), service de renseignement militaire.
+  
+  - Affiliations : 
+    - État nord-coréen, soutenu par le gouvernement. Liens avec APT38, Andariel, Kimsuky.
+  
+  - Motivations : 
+    - Vol financier, principalement via crypto-monnaies, pour financer les programmes nucléaire et balistique de Pyongyang
+    
+    - Espionnage et sabotage, notamment contre des cibles gouvernementales.
+
+  ### Historique des opérations
+  - [2009–2012] :	Opération Troy	DDoS contre sites sud-coréens et américains, malwares Mydoom/Dozer
+  
+  - [2011] :	Ten Days of Rain	DDoS sophistiqués visant médias, banques, infrastructure SK
+  
+  - [2013] :	DarkSeoul	Wiper contre chaînes TV sud-coréennes, institutions financières
+  
+  - [2014] :	Sony Pictures Hack	Vol/effacement de ~100 To data, extorsion via « Guardians of Peace »
+  
+  - [2016] :	Bangladesh Bank Heist	Tentative de vol de ~951 M$, ~81 M$ réussis via SWIFT
+  
+  - [2017] :	WannaCry	Ransomware global via EternalBlue, ~200 000 machines touchées
+  
+  - [2019] :	Attaques ElectricFish	Détection de nouveaux malwares, plusieurs vols (ex. 49 M$ Koweït)
+  
+  - [2020] :	Pharma / COVID‑19	Spear‑phishing ciblant AstraZeneca et autres
+  
+  - [2022] :	Axie Infinity (Ronin)	Vol de crypto ≃ 620 M$
+  
+  - [2022] :	Harmony Horizon Bridge	Vol de 100 M$
+  
+  - [2023] :	Atomic Wallet, Stake.com…	Vols > 100 M$ et 41 M$ respectivement
+  
+  - [2025] :	Bybit	Vol record de 1,5 Md$ (Ethereum) 
+
+  ### Arsenal technique
+  - Malwares
+    - WannaCry, AppleJeus, DTrack, RATANKBA, COPPERHEDGE, FALLCHILL, ElectricFish, Ghost RAT, AuditCred, Bankshot…
+  
+  - Méthodes d’intrusion
+    - spear‑phishing (emails, LinkedIn, fausses offres d’emploi), watering‑holes, compromission de chaîne d’approvisionnement (3CX, JumpCloud), exploit de zero-day (EternalBlue), faux apps cryptos (AppleJeus).
+  
+  - Infrastructure
+    - C2 en trois niveaux avec SSL, distribution géographique, hébergements bulletproof, VPN (SoftEther), abuse de DropBox, Telegram, Google Drive
+
+  ### Victimologie
+  - Secteurs ciblés
+    - Crypto‑finance : exchanges (Bybit, Atomic Wallet, Stake…), ponts DeFi (Ronin, Harmony), services associés
+    - Banques traditionnelles & SWIFT (Bangladesh, Ecuador, Taïwan, Pologne, Mexique…)
+    - Médias / divertissement (Sony)
+    - Recherche pharmaceutique (COVID‑19)
+    - Gouvernements et infrastructures critiques (Corée du Sud, USA)
+
+  - Géographie : 
+    - Monde entier, avec concentration sur les Amériques, Asie (SK, Japon), Europe.
+
+  - Sélection des cibles : 
+    - Institutions riches en liquidités (crypto), systèmes vulnérables, utilisateurs ciblés via ingénierie sociale.
+
+  ### Particularités
+  - Signatures techniques :
+    - Chiffrement Spritz (variante RC4), multi‑étapes, camouflage TLS
+    - Imitation de trafic TLS, usage de domaines populaires (vk.com, baidu, naver)
+
+  - Comportements distinctifs :
+    - Tromperie via fausses recrues (LinkedIn/job offers)
+    - Évolution constante pour semer la confusion : adoption de symboles russes, outils Enigma Protector, fausses activités russes dès 2016
+    - Infrastructure récurrente : bien ciblée mais réutilisée, permettant la détection
+
+  ### Indicateurs de compromission
+  - Hashs de fichiers :
+    - SHA256 : 875B0CBAD25E04A255B13F86BA361B58453B6F3C5CC11ACA2DB573C656E64E24
+    - MD5 : 15DC6A28B875B4706BCC0DB4A026AEB0
+
+  - Domains & URLs :
+    - www.addfriend.kr (C2), addfriend.kr/board/userfiles/temp/index.html
+
+  - Adresses IP :
+    - 211.239.117.117 (C2, Corée du Sud)
+    - 210.52.109.22, 175.45.178.222, 175.45.178.19, …178.97 (infrastructure en RPDC)
+
+  ### Contre-mesures
+  - Patchs et gestion des vulnérabilités
+    - cmbre contre EternalBlue et exploits connus.
+    
+  - MFA obligatoire
+    - surtout pour accès privés ou finance.
+  
+  - Segmentation réseau
+    - limiter la propagation via SMB, RDP.
+  
+  - EDR avec détection de comportements
+    - surveiller PowerShell, keyloggers, communication anormale.
+  
+  - Filtrage TLS/anomalies réseau
+    - détection de faux TLS, trafic vers addfriend.kr, IP C2 connus.
+  
+  - Sensibilisation phishing
+    - formation sur ingénierie sociale, fausses offres LinkedIn.
+  
+  - Threat Intelligence & IOCs
+    - intégrer listes de domaines, IPs, hashs, infra habituelle (C2 multi-couches).
+  
+  - Plan de réponse & backup
+    - préparation, tests, sauvegardes isolées.
+
+  ` },
+  { id: '21', content: `
+  # Lapsus$
+
+  ### Identification du groupe
+  - 
+
+  ### Historique des opérations
+  - 
+
+  ### Arsenal technique
+  - 
+
+  ### Victimologie
+  - 
+
+  ### Particularités
+  - 
+
+  ### Indicateurs de compromission
+  - 
+
+  ### Contre-mesures
+  - 
+
+  ` },
+  { id: '22', content: `
+  # Conti/BlackCat
+
+  ### Identification du groupe
+  - 
+
+  ### Historique des opérations
+  - 
+
+  ### Arsenal technique
+  - 
+
+  ### Victimologie
+  - 
+
+  ### Particularités
+  - 
+
+  ### Indicateurs de compromission
+  - 
+
+  ### Contre-mesures
+  - 
+
   ` }
 ]
 
